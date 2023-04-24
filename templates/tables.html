@@ -1,0 +1,65 @@
+<html>
+<head>
+		<title>Live Data</title>
+		<style>
+			table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: black;
+  color: #fff;
+  font-size: 18px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+td{
+  font-weight: bold;
+  color: black
+}
+
+@media only screen and (max-width: 768px) {
+  td, th {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+		</style>
+</head>
+<body >
+	<center>
+	<table style="color: #ffffff", border="1">
+    <tr>
+      <th>Temperature</th>
+      <th>Humidity</th>
+      <th>TimeStamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in li %}
+    <tr>
+      <td>{{ row[0] }}</td>
+      <td>{{ row[1] }}</td>
+      <td>{{ row[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</center>
+</body>
+</html>
